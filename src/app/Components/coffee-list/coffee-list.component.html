@@ -1,0 +1,5 @@
+<section class="flex flex-wrap gap-8 max-w-4xl justify-center mt-10">
+    @for (coffee of coffees; track coffee.id) {
+        <app-card [coffeeInformation]="coffee"></app-card>
+    }
+</section>

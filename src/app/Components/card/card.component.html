@@ -1,0 +1,18 @@
+<div class="w-[260px]">
+    <div class="relative">
+        <img src="{{ coffeeInformation.image }}" alt="" class="rounded-xl">
+        <label class="bg-[#F6C768] text-[10px] rounded-full px-3 py-1 absolute top-2 left-2 {{ coffeeInformation.popular ? 'block' : 'hidden' }}">Popular</label>
+    </div>
+    <div class="flex justify-between mt-3">
+        <h2 class="text-[#FEF7EE] font-medium">{{ coffeeInformation.name }}</h2>
+        <span class="bg-[#BEE3CC] text-xs text-[#111315] px-2 py-1 font-bold rounded-md">{{ coffeeInformation.price }}</span>
+    </div>
+    <div class="flex mt-3 justify-between">
+        <div class="flex gap-1">
+            <img src="{{ coffeeInformation.rating ? '../assets/Star_fill.svg' : '../assets/Star.svg' }}" alt="">
+            <p class="text-[#FEF7EE] font-medium">{{ coffeeInformation.rating }}</p>
+            <span class="text-[#6F757C] font-bold">{{ coffeeInformation.rating ? '(' + coffeeInformation.votes + ' votes)' : 'No ratings' }}</span>
+        </div>
+        <span class="text-[#ED735D] font-bold text-sm right-0">{{ coffeeInformation.available ? '' : 'Sold out' }}</span>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+<main class="bg-[#1B1D1F] px-5 sm:px-10 py-20 text-center font-semibold rounded-xl mt-[-160px] mb-10 flex flex-col items-center">
+    <h1 class="text-[32px] text-[#FEF7EE]">Our Collection</h1>
+    <p class="text-[#6F757C] mt-2">Introducing our Coffee Collection, a selection of unique coffees from different roast types and origins, expertly roasted in small batches and shipped fresh weekly.</p>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center mt-5">
+        <button class="px-3 py-2 text-[#FEF7EE] rounded-lg mt-5 {{ allSelected ? 'bg-[#6F757C]' : '' }}" (click)="handleAllClick()">All products</button>
+        <button class="px-3 py-2 text-[#FEF7EE] rounded-lg mt-5 {{ allSelected ? '' : 'bg-[#6F757C]' }}" (click)="handleAvailableClick()">Available now</button>
+    </div>
+    <app-coffee-list [coffees]="filteredCoffees"></app-coffee-list>
+</main>
